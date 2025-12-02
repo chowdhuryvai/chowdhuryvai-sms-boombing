@@ -18,7 +18,7 @@ Navigate to the folder where your script is saved.
 
 ## 2. Run the Script
 
-## 3. python darkboss1-sms-boombing.py
+## 3. python3 chowdhuryvai-sms-boombing.py
 
 
 ## Enter the Bangladeshi phone number (without country code +88, just 01xxxxxxxxx).
